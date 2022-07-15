@@ -9,29 +9,31 @@
     <title>SignUp Page</title>
 </head>
 <body>
-    <div class="signup">
+    <div class="signup" id="body">
         <div class="">
             <div class="row g-0">
                 <div class="col-lg-6 img-sect" >
-                    <img src="img/Rectangle 35.png" class="img-fluid" alt="">
+                    <img src="img/Group 30954 (1).png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-6 col-sm-12 ps-3 py-4 bg-white" style="max-width:100%;">
-                    <div class="form-heading ms-5 mt-4">
+                
+                <div class="col-sm-8 col-md-12 col-lg-6 sm-margin-auto ps-3 py-1 bg-white right-side">
+                  <div class="container">
+                      <div class="form-heading ms-5 mt-4">
                         <h1>Create an Account</h1>
-                    <p>Let's take you around the world</p>
-                    </div>
-                    <form class="row ms-4">
-                        <div class="col-lg-8 col-sm mb-3">
+                        <p>Let's take you around the world</p>
+                      </div>
+                     <form class="row ms-4">
+                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
                           <label for="inputEmail4" class="form-label">Your Name</label>
                           <input type="text" class="form-control" id="inputEmail4" placeholder="johndoe">
                         </div>
-                        <div class="col-sm-8 mb-3">
+                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
                           <label for="inputAddress" class="form-label">Email</label>
                           <input type="email" class="form-control" id="inputAddress" placeholder="johndoe@example.com">
                         </div>
                         
                             <div class="row g-2">
-                                <div class="col-sm-2 mt-2 mb-3">
+                                <div class="col-sm-3 col-md-3 col-lg-2  mt-2 mb-2 ms-2">
                                     
                                         <label for="phone Number">Phone Number</label>
                                       <select class="form-select" id="floatingSelectGrid">
@@ -41,14 +43,14 @@
                                         <option value="3">+801</option>
                                       </select>
                                 </div>
-                                <div class="col-6">
-                                  <div class="">
-                                    <input type="text" class="form-control mt-4" id="floatingInputGrid">
+                                <div class="col-sm-8 col-md-6 col-lg-6">
+                                  <div class="mohd">
+                                    <input type="number" class="form-control mt-4" id="floatingInputGrid">
                                   </div>
                                 </div>
                             </div>
                         
-                        <div class="col-sm-8 mb-3">
+                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
                           <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="password should contain 6 characters">
                             <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +59,7 @@
                                 </svg>
                                 </span>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-12 col-md-9 col-lg-8">
                             <label for="password" class="form-label">Re-enter password</label>
                               <input type="password" class="form-control" id="password" placeholder="re-enter password">
                               <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +69,7 @@
                                 </span>
                               <p>Password should be alpha-numerical</p>
                           </div>
-                        <div class="col-12 mb-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-2">
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
                             <label class="form-check-label fs-6" for="gridCheck">
@@ -75,14 +77,16 @@
                             </label>
                           </div>
                         </div>
-                        <div class="d-grid gap-2 col-sm-8">
+                        <div class="d-grid gap-2 col-sm-12 col-md-9 col-lg-8">
                             <button class="text-center btn btn-outline-primary" type="submit">Create Account</button>
                         </div>
                         <div class="Last">
                             <p>Already have an account? <a href="#" class="text-decoration-none">Login</a></p>
                         </div>
                       </form>
+                    </div>
                 </div>
+              
             </div>
         </div>
     </div>
