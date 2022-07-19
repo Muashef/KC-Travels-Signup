@@ -1,129 +1,210 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html{
-    /* height: 100vh;
-    min-height: 100%; */
+body {
+  font-family: "Open Sans";
 }
 
-body{
-    font-family: 'Open Sans';
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
+.signup-image-container {
+  padding: 0;
 }
 
-#body{
-    height: 100vh;
-    /* width: 100%; */
-    /* max-width: 1200px; */
+.signup-image-container img {
+  height: 100vh;
+  width: 100%;
 }
 
-.img-sect img{
-    height: 100vh;
-    width: 100%;
+.form-body {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.right-side{
-    height: 100vh;
-    /* min-height: 40%; */
-    /* width: 100%; */
+a {
+  text-decoration: none;
+  font-weight: 500;
 }
 
-h1{
-  font-family: 'Open Sans';
-  font-style: normal;
- font-weight: 700;
- font-size: 40px;
- line-height: 30px;
- color:#1f222a;
+h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-bottom: 4px;
 }
 
-p{
-    font-family: 'Open Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-color: #1F222A;
+.small-text {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-label{
-    font-family: 'Open Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-color: #1F222A;
+#name-input, #password-input,
+#email-input,
+.creat-acc-btn {
+  width: 100%;
+  height: 38px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 0.5px solid #b4b8c0;
+  background-color: #d9d9d9;
+  color: black;
+  outline: none;
+  font-size: 16px;
 }
 
-.Last{
-    margin-left: 70px;
+#phone-number{
+    width: 14%;
+    height: 38px;
+    padding: 8px 10px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 0.5px solid #b4b8c0;
+    background-color: #d9d9d9;
+    color: black;
+    outline: none;
+    font-size: 16px
 }
 
-.col-sm-8 svg{
-    float:right;
-    margin-top: -30px;
-    margin-right: 5px;
+
+.phone{
+    width: 85%;
+    height: 38px;
+    /* display: inline-block; */
+    padding: 10px 8px;
+    margin-top: -8px;
+    border-radius: 8px;
+    border: 0.5px solid #b4b8c0;
+    background-color: #d9d9d9;
+    color: black;
+    outline: none;
+    font-size: 16px;
+}
+
+.eye {
+  position: absolute;
+  margin-left: -30px;
+  padding-top: 8px;
+  margin-top: -0px;
+  cursor: pointer;
+  color: #b4b8c0;
+  font-size: 14px;
+}
+
+.eye-open {
+  display: none;
+}
+
+#email-error,
+#password-error {
+  display: block;
+  font-weight: 500;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.create-acc-btn {
+  border: none;
+  color: black;
+}
+
+.creat-acc-btn:hover {
+  background-color: #174aad;
+  color: white;
 }
 
 
-.form-control, .form-select, .btn{
-    background: rgba(217, 217, 217, 0.5);
-    opacity: 0.87;
-    border: 0.5px solid #B4B8C0;
-    border-radius: 7px;
-}
-.container{
-    align-items: center;
-    justify-content: center;
+.password-label {
+  margin-top: 2px;
 }
 
-@media screen and (max-width: 768px) {
-    .img-sect{
-        display: none;
-    }
-
-    .right-side{
-        height: 100vh;
-        margin: auto;
-    }
-    }
-    .right-side .form-heading h1{
-        margin-top: 0;
-    }
+::placeholder {
+  color: #b4b8c0;
+  font-size: 14px;
 }
-    
-@media screen and (max-width: 375px) {
-    .form-control, .btn{
-        width: 80% !important;;
-    }
 
-    .form-select{
-        width: 30% !important;;
-    }
-
-    .col-sm-8 svg{
-        display: none;
-    }
-    .Last{
-        margin-left: 10px;
-    }
-    
-    h1{
-        font-size: 30px;
-    }
-    .mohd{
-        /* display: inline-block; */
-    }
+label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 2px; 
 }
-   
-
-    
 
 
+@media (max-width: 769px) {
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
 
+  .form-body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
+  .signup-subheader {
+    text-align: center;
+  }
 
+  #name-input, #phone-number,.phone, #password-input,
+  #email-input,
+  .create-acc-btn {
+    border: 0.5px solid #174aad;
+    border-radius: 4px;
+  }
 
-    
+  .create-acc a,
+  .create-acc label {
+    font-size: 14px;
+  }
+
+  .signup-image-container {
+    display: none;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  .eye {
+    padding: 10px 0px 0px 5px;
+  }
+}
+
+@media (max-width: 769px) {
+  .small-text {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 375px){
+  #phone-number {
+    padding: 0px;
+    width: 19%;
+  }
+
+  .small-text{
+    font-size: 11px;
+    font-weight: 350;
+  }
+
+  .phone {
+    width:79%;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 440px) {
+  #phone-number {
+    width: 23%;
+  }
+
+  .phone{
+    width: 75%;
+  }
+}

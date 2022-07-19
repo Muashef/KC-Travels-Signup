@@ -1,97 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>SignUp Page</title>
-</head>
-<body>
-    <div class="signup" id="body">
-        <div class="">
-            <div class="row g-0">
-                <div class="col-lg-6 img-sect" >
-                    <img src="img/Group 30954 (1).png" class="img-fluid" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 signup-image-container">
+          <img src="img/Group 30954 (1).png" alt="" class="image-fluid" />
+        </div>
+        <div class="col-lg-6 form-section">
+          <form action="signup" id="form" class="form-body">
+            <h4 class="">Create an Account</h4>
+            <p class="signup-subheader lh-1">Let's take you around the world</p>
+            <div class="main">
+              <label for="name" class="name-label">Your Name</label><br />
+              <input
+                type="text"
+                id="name-input"
+                placeholder="johndoe"
+              />
+
+              <label for="email" class="email-label">Email</label><br />
+              <input
+                type="email"
+                id="email-input"
+                placeholder="johndoe@example.com"
+              />
+              <p id="email-error"></p>
+
+              <label for="Phone-number" class="phone-label">Phone Number</label><br />
+              <select name="phone-number" id="phone-number">
+                <option value="">+234</option>
+                <option value="">+224</option>
+                <option value="">+668</option>
+              </select>
+              <input type="number" class="phone">
+
+
+              <label for="password" class="password-label d-block">Password</label>
+              <input
+                type="password"
+                id="password-input"
+                placeholder="password should contain at least 8 characters"
+                onkeydown="passwordValidation()"
+              />
+              <span class="eye" onclick="togglePassword ()">
+                <i class="bi bi-eye-fill eye-open"></i>
+                <i class="bi bi-eye-slash-fill eye-closed"></i>
+              </span>
+              <span id="password-error"></span>
+
+              <label for="password" class="password-label">Re-enter Password</label>
+              <input
+                type="password"
+                id="password-input"
+                placeholder="re-enter password"
+                onkeydown="passwordValidation()"
+              />
+              <span class="eye" onclick="togglePassword ()">
+                <i class="bi bi-eye-fill eye-open"></i>
+                <i class="bi bi-eye-slash-fill eye-closed"></i>
+              </span>
+              <span id="password-error"></span>
+              <p>Password should be alpha-numerical</p>
+
+              <div class="creat-acc d-flex justify-content-between mb-4">
+                <div class="check-box d-flex align-items-center">
+                  <input type="checkbox" name="" id="logged-in" />
+                  <label for="" class="small-text ps-1 pt-1"
+                    >By creating an account, you agree to our terms and condition</label
+                  >
                 </div>
                 
-                <div class="col-sm-8 col-md-12 col-lg-6 sm-margin-auto ps-3 py-1 bg-white right-side">
-                  <div class="container">
-                      <div class="form-heading ms-5 mt-4">
-                        <h1>Create an Account</h1>
-                        <p>Let's take you around the world</p>
-                      </div>
-                     <form class="row ms-4">
-                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
-                          <label for="inputEmail4" class="form-label">Your Name</label>
-                          <input type="text" class="form-control" id="inputEmail4" placeholder="johndoe">
-                        </div>
-                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
-                          <label for="inputAddress" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="inputAddress" placeholder="johndoe@example.com">
-                        </div>
-                        
-                            <div class="row g-2">
-                                <div class="col-sm-3 col-md-3 col-lg-2  mt-2 mb-2 ms-2">
-                                    
-                                        <label for="phone Number">Phone Number</label>
-                                      <select class="form-select" id="floatingSelectGrid">
-                                        <option>+234</option>
-                                        <option value="1">+255</option>
-                                        <option value="2">+664</option>
-                                        <option value="3">+801</option>
-                                      </select>
-                                </div>
-                                <div class="col-sm-8 col-md-6 col-lg-6">
-                                  <div class="mohd">
-                                    <input type="number" class="form-control mt-4" id="floatingInputGrid">
-                                  </div>
-                                </div>
-                            </div>
-                        
-                        <div class="col-sm-12 col-md-9 col-lg-8 mb-2">
-                          <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="password should contain 6 characters">
-                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M11.9902 3.8819H12C13.3951 3.8819 14.7512 4.21663 16 4.84573L12.7415 8.13497C12.5073 8.09559 12.2537 8.06606 12 8.06606C9.8439 8.06606 8.09756 9.82833 8.09756 12.0041C8.09756 12.2601 8.12683 12.516 8.16585 12.7523L4.5561 16.395C3.58049 15.253 2.73171 13.8737 2.05854 12.2896C1.98049 12.1124 1.98049 11.8958 2.05854 11.7087C4.14634 6.80589 7.86341 3.8819 11.9902 3.8819ZM18.4293 6.54991C19.8439 7.84947 21.0439 9.60189 21.9415 11.7087C22.0195 11.8958 22.0195 12.1124 21.9415 12.2896C19.8537 17.1925 16.1366 20.1263 12 20.1263H11.9902C10.1073 20.1263 8.30244 19.506 6.71219 18.3739L9.80488 15.253C10.4293 15.6753 11.1902 15.9323 12 15.9323C14.1463 15.9323 15.8927 14.17 15.8927 12.0041C15.8927 11.1869 15.639 10.419 15.2195 9.78895L18.4293 6.54991Z" fill="#B4B8C0"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4296 6.54952L20.2052 4.75771C20.4979 4.4722 20.4979 3.99964 20.2052 3.71413C19.9223 3.42862 19.4637 3.42862 19.1711 3.71413L18.254 4.63957C18.2442 4.65926 18.2247 4.67895 18.2052 4.69864C18.1954 4.71833 18.1759 4.73802 18.1564 4.75771L17.2881 5.63491L14.1954 8.7558L3.72715 19.3186L3.69789 19.358C3.50276 19.6435 3.54179 20.0383 3.78569 20.2844C3.92228 20.4311 4.1174 20.5 4.30276 20.5C4.48813 20.5 4.6735 20.4311 4.81984 20.2844L15.2198 9.78855L18.4296 6.54952ZM12.0004 14.4555C13.337 14.4555 14.4297 13.3529 14.4297 12.0041C14.4297 11.5906 14.3321 11.1968 14.1565 10.8621L10.8687 14.1798C11.2004 14.3571 11.5907 14.4555 12.0004 14.4555Z" fill="#B4B8C0"/>
-                                </svg>
-                                </span>
-                        </div>
-                        <div class="col-sm-12 col-md-9 col-lg-8">
-                            <label for="password" class="form-label">Re-enter password</label>
-                              <input type="password" class="form-control" id="password" placeholder="re-enter password">
-                              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M11.9902 3.8819H12C13.3951 3.8819 14.7512 4.21663 16 4.84573L12.7415 8.13497C12.5073 8.09559 12.2537 8.06606 12 8.06606C9.8439 8.06606 8.09756 9.82833 8.09756 12.0041C8.09756 12.2601 8.12683 12.516 8.16585 12.7523L4.5561 16.395C3.58049 15.253 2.73171 13.8737 2.05854 12.2896C1.98049 12.1124 1.98049 11.8958 2.05854 11.7087C4.14634 6.80589 7.86341 3.8819 11.9902 3.8819ZM18.4293 6.54991C19.8439 7.84947 21.0439 9.60189 21.9415 11.7087C22.0195 11.8958 22.0195 12.1124 21.9415 12.2896C19.8537 17.1925 16.1366 20.1263 12 20.1263H11.9902C10.1073 20.1263 8.30244 19.506 6.71219 18.3739L9.80488 15.253C10.4293 15.6753 11.1902 15.9323 12 15.9323C14.1463 15.9323 15.8927 14.17 15.8927 12.0041C15.8927 11.1869 15.639 10.419 15.2195 9.78895L18.4293 6.54991Z" fill="#B4B8C0"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4296 6.54952L20.2052 4.75771C20.4979 4.4722 20.4979 3.99964 20.2052 3.71413C19.9223 3.42862 19.4637 3.42862 19.1711 3.71413L18.254 4.63957C18.2442 4.65926 18.2247 4.67895 18.2052 4.69864C18.1954 4.71833 18.1759 4.73802 18.1564 4.75771L17.2881 5.63491L14.1954 8.7558L3.72715 19.3186L3.69789 19.358C3.50276 19.6435 3.54179 20.0383 3.78569 20.2844C3.92228 20.4311 4.1174 20.5 4.30276 20.5C4.48813 20.5 4.6735 20.4311 4.81984 20.2844L15.2198 9.78855L18.4296 6.54952ZM12.0004 14.4555C13.337 14.4555 14.4297 13.3529 14.4297 12.0041C14.4297 11.5906 14.3321 11.1968 14.1565 10.8621L10.8687 14.1798C11.2004 14.3571 11.5907 14.4555 12.0004 14.4555Z" fill="#B4B8C0"/>
-                                </svg>
-                                </span>
-                              <p>Password should be alpha-numerical</p>
-                          </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 mb-2">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label fs-6" for="gridCheck">
-                                By creating an account, you agree to our Terms & Conditions
-                            </label>
-                          </div>
-                        </div>
-                        <div class="d-grid gap-2 col-sm-12 col-md-9 col-lg-8">
-                            <button class="text-center btn btn-outline-primary" type="submit">Create Account</button>
-                        </div>
-                        <div class="Last">
-                            <p>Already have an account? <a href="#" class="text-decoration-none">Login</a></p>
-                        </div>
-                      </form>
-                    </div>
-                </div>
+              </div>
+
+              <button class="fw-bold mb-2 creat-acc-btn" type="submit">
+                Create Account
+              </button>
+              <p class="small-text text-center mb-4">
+                Already have an account?
+                <span class="text-primary small-text text-center"
+                  ><a href="#">Log in</a></span
+                >
+              </p>
               
             </div>
+          </form>
         </div>
+      </div>
     </div>
 
-
-    <script src="js/bootstrap.min.js"></script>
-</body>
+    <script src="js/signup.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
 </html>
